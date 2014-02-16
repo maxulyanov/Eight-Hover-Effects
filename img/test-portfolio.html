@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Скрипт для портфолио</title>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+</head>
+<style type="text/css">
+	body{
+		background: #F7F7F7;
+		text-align: center;
+	}
+	.item, .item2, .item3, .item4, .item5, .item6, .item7, .item8{
+		margin:50px 30px;
+		display: inline-block;
+		width:460px;
+		position: relative;
+		border:5px solid #DDD;
+		overflow: hidden;
+		font-family: 'PT Sans', sans-serif;
+				 -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+
+	}
+	.item:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover, .item7:hover,.item8:hover{
+		border-color:#50B4DF;
+				 -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    -webkit-transition: all 0.5s ease;
+	    transition: all 0.5s ease
+	}
+	.portfolio-overflow{
+		background: #000;
+		width:100%;
+		height:100%;
+		position: absolute;
+	}
+	.icon{
+		position: absolute;
+		top:0;
+		left:43%;
+		background: url(icon.png) no-repeat;
+		display:block;
+		width:64px;
+		height:83px;
+	}
+	.title{
+		position: absolute;
+		background: #EBEBEB;
+		left:0;
+		width: 100%;
+		padding: 20px 0px;
+		bottom: -50px;
+		text-align: center;
+	}
+	.title a{
+		color: #525252;
+		font-size:20px;
+		text-decoration: none;
+		 -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+	}
+	.title a:hover{
+		color:#50B4DF;
+		 -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+	}
+
+
+	/*2*/
+	.portfolio-overlay-top {
+		background: #000;
+		width: 100%;
+		height:0;
+		position: absolute;
+		top:0;
+	}
+	.portfolio-overlay-bottom{
+		background: #000;
+		width: 100%;
+		height:0;
+		position: absolute;
+		bottom:0;
+	}
+	.read{
+		position: absolute;
+		top: 44%;
+		left: 27%;
+		background: #50B4DF;
+		text-decoration: none;
+		padding: 10px 30px;
+		color: #FFF;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 14px;
+			 -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+	}
+	.read:hover{
+		background: #353535;
+			 -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease
+	}
+
+
+	/*3*/
+	.portfolio-overlay-top-all{
+		background: #000;
+		width: 100%;
+		height:0;
+		position: absolute;
+		top:0;
+	}
+
+	/*4*/
+	.portfolio-overlay-1, .portfolio-overlay-2{
+		background: #000;
+		width: 0%;
+		height:0%;
+		position: absolute;
+		top:0;
+		right:0;
+	}
+	.portfolio-overlay-2{
+		left:0;
+	}
+	.portfolio-overlay-3, .portfolio-overlay-4{
+		background: #000;
+		width: 0%;
+		height:0%;
+		position: absolute;
+		bottom:0;
+		right:0;
+	}
+	.portfolio-overlay-4{
+		left:0;
+	}
+
+	/*5*/
+	.portfolio-overlay-square,.portfolio-overlay-square-2{
+		background: #000;
+		width: 0%;
+		height:0%;
+		position: absolute;
+		top:50%;
+		left:50%;
+	}
+
+	/*6*/
+	.mini-square,
+	.mini-square-1,
+	.mini-square-2,
+	.mini-square-3,
+	.mini-square-4,
+	.mini-square-5,
+	.mini-square-6,
+	.mini-square-7,
+	.mini-square-8{
+		width:33.4%;
+		height:33.4%;
+		position: absolute;
+		background: #000;
+	}
+	.mini-square{
+		top:0;
+		left:0;
+	}
+	.mini-square-1{
+		top:0;
+		left:33.3%;
+	}
+	.mini-square-2{
+		top:0;
+		left:66.7%;
+	}
+	.mini-square-3{
+		top:33.3%;
+		left:0;
+	}
+	.mini-square-4{
+		top:33.4%;
+		left:33.3%;
+	}
+	.mini-square-5{
+		top:33.4%;
+		left:66.7%;
+	}
+	.mini-square-6{
+		top:66.7%;
+		left:0;
+	}
+	.mini-square-7{
+		top:66.7%;
+		left:33.3%;
+	}
+	.mini-square-8{
+		top:66.7%;
+		left:66.7%;
+	}
+
+
+	/*7*/
+	.mini-line,
+	.mini-line-1,
+	.mini-line-2,
+	.mini-line-3{
+		width:25%;
+		height:0%;
+		position: absolute;
+		background: #000;
+	}
+	.mini-line{
+		top:0;
+		left:0;
+	}
+	.mini-line-1{
+		top:0;
+		left:25%;
+	}
+	.mini-line-2{
+		top:0;
+		left:50%;
+	}
+	.mini-line-3{
+		top:0;
+		left:75%;
+	}
+
+	/*8*/
+	.mini-line-left,
+	.mini-line-left-1,
+	.mini-line-right,
+	.mini-line-right-1{
+		width:0%;
+		height:25%;
+		position: absolute;
+		background: #000;
+	}
+	.mini-line-left{
+		top:0;
+		left:0;
+	}
+	.mini-line-left-1{
+		top:50%;
+		left:0;
+	}
+	.mini-line-right{
+		top:25%;
+		right:0;
+	}
+	.mini-line-left{
+		top:75%;
+		right:0;
+	}
+
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('.icon').hide();
+		$('.title').hide();
+		$('.read').hide().css('opacity', '0');
+		$('.portfolio-overflow').css('opacity', '0');
+
+		//1
+		$('.item').hover(function(){
+			$(this).find('.portfolio-overflow').stop(1,1).animate({opacity: 0.7}, 600);
+			$(this).find('.icon').stop(0,1).animate({'opacity' : 'show', 'top' : '32%'}, 500)
+			$(this).find('.title').stop(0,1).animate({'opacity' : 'show', 'bottom' : '-20px'}, 500);
+		},
+		function(){
+			$(this).find('.portfolio-overflow').stop(1,1).animate({opacity: 0}, 600)
+			$(this).find('.icon').stop(0,1).animate({'opacity' : 'hide'}, 500).animate({'top' : '0'}, 10);
+			$(this).find('.title').stop(0,1).animate({'opacity' : 'hide'}, 500).animate({'bottom' : '-50px'}, 10)
+		});
+
+		//2
+		$('.item2').hover(function(){
+			$(this).children('.portfolio-overlay-top, .portfolio-overlay-bottom').animate({'opacity': '0.7','height' : '40%'}, 600)
+			$(this).find('.read').css('display', 'block').animate({'opacity' : '1'}, 300)
+		},
+		function(){
+			$(this).children('.portfolio-overlay-top, .portfolio-overlay-bottom').animate({'height' : '0'}, 600);
+			$(this).find('.read').animate({'opacity' : '0'}, 300)
+		});
+
+		//3
+		$('.item3').hover(function(){
+			$(this).find('.portfolio-overlay-top-all').animate({'opacity': '0.7','height' : '100%'}, 600)
+		},
+		function(){
+			$(this).find('.portfolio-overlay-top-all').animate({'height' : '0'}, 600);
+		});
+
+		//4
+		$('.item4').hover(function(){
+			$(this).children('.portfolio-overlay-1, .portfolio-overlay-2, .portfolio-overlay-3, .portfolio-overlay-4').animate({'opacity': '0.7','height' : '50%', 'width' : '50%'}, 600)
+		},
+		function(){
+			$(this).children('.portfolio-overlay-1, .portfolio-overlay-2, .portfolio-overlay-3, .portfolio-overlay-4').animate({'opacity': '0.7','height' : '0%', 'width' : '0%'}, 600)
+		});
+
+		//5
+		$('.portfolio-overlay-square, .portfolio-overlay-square-2').css('opacity', '0')
+		$('.item5').hover(function(){
+			$(this).find('.portfolio-overlay-square').animate({'opacity': '0.7','height' : '50%', 'width' : '100%', 'left' :'0%', 'top' : '50%'}, 600)
+			$(this).find('.portfolio-overlay-square-2').animate({'opacity': '0.7','height' : '50%', 'width' : '100%', 'left' :'0%', 'top' : '0%'}, 600)
+		},
+		function(){
+			$(this).find('.portfolio-overlay-square').animate({'opacity': '0.7','height' : '0%', 'width' : '0%', 'left' :'50%', 'top' : '50%'}, 600)
+			$(this).find('.portfolio-overlay-square-2').animate({'opacity': '0.7','height' : '0%', 'width' : '0%', 'left' :'50%', 'top' : '50%'}, 600)
+		});
+
+		//6
+		$('.mini-box').find('div').fadeOut();
+
+		$('.item6').hover(function(){
+			$('.mini-box > div').each(function(i) {
+    		$(this).delay((i++) * 35).fadeTo(600, 0.7); })
+
+		},function(){
+			$('.mini-box div').each(function(i) {
+    		$(this).delay((i++) * 35).fadeTo(600, 0); })
+		});
+
+		//7
+		$('.item7').hover(function(){
+			$('.mini-box-line > div').each(function(i) {
+    		$(this).delay((i++) * 100).animate({'height' : '100%', 'opacity': '0.7'}, 600) })
+		},
+		function(){
+			$('.mini-box-line > div').each(function(i) {
+    		$(this).delay((i++) * 0).animate({'height' : '0', 'opacity': '0.7'}, 600) })
+		});
+
+		//7
+		$('.item8').hover(function(){
+			$('.mini-box-line-2 > div').each(function(i) {
+    		$(this).delay((i++) * 50).animate({'width' : '100%', 'opacity': '0.7'}, 600) })
+		},
+		function(){
+			$('.mini-box-line-2 > div').each(function() {
+    		$(this).animate({'opacity': '0'}, 600).animate({'width' : '0'})});   	
+		});
+	});
+</script>
+<body>
+	<div class="item">
+		<div class="portfolio-overlay"></div>
+		<a href="#" class="icon"></a>
+		<a href="#"><img src="1.jpg" alt=""></a>
+		<h2 class="title"><a href="#">Интернет-Магазин Промискож</a></h2>
+	</div>
+
+	<div class="item2">
+		<div class="portfolio-overlay-top"></div>
+		<div class="portfolio-overlay-bottom"></div>
+		<a href="#" class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>
+
+	<div class="item3">
+		<div class="portfolio-overlay-top-all"></div>
+		<a href="#" class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>
+
+	<div class="item4">
+		<div class="portfolio-overlay-1"></div>
+		<div class="portfolio-overlay-2"></div>
+		<div class="portfolio-overlay-3"></div>
+		<div class="portfolio-overlay-4"></div>
+		<a href="#" class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>
+
+	<div class="item5">
+		<div class="portfolio-overlay-square"></div>
+		<div class="portfolio-overlay-square-2"></div>
+		<a href="#" class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>
+	<div class="item6">
+		<div class="mini-box">
+			<div class="mini-square"></div>
+			<div class="mini-square-1"></div>
+			<div class="mini-square-2"></div>
+			<div class="mini-square-3"></div>
+			<div class="mini-square-4"></div>
+			<div class="mini-square-5"></div>
+			<div class="mini-square-6"></div>
+			<div class="mini-square-7"></div>
+			<div class="mini-square-8"></div>
+		</div>
+		<a href="# "class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>
+	<div class="item7">
+		<div class="mini-box-line">
+			<div class="mini-line"></div>
+			<div class="mini-line-1"></div>
+			<div class="mini-line-2"></div>
+			<div class="mini-line-3"></div>
+		</div>
+		<a href="#" class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>
+	<div class="item8">
+		<div class="mini-box-line-2">
+			<div class="mini-line-left"></div>
+			<div class="mini-line-right"></div>
+			<div class="mini-line-left-1"></div>
+			<div class="mini-line-right-1"></div>
+		</div>
+		<a href="#" class="read">Посмотреть работу</a>
+		<img src="1.jpg" alt="">
+	</div>			
+</body>
+</html>
