@@ -104,9 +104,7 @@ $(function(){
 			opacity : 	'hide',
 			top : 		'0%'
 		}, 600)
-	});
-
-
+	});	
 	// №5
 	$('.overlay-square, .overlay-square-2').css('opacity', '0.7')
 	$('.item-5').find('.zoom').css('opacity', '0');

@@ -1,0 +1,7 @@
+.item-6 .box-arrow .arrow{
+	background: url(../img/arrow.png) 170px -3px no-repeat;
+	margin-left: 15px;
+}
+.item-6 .box-arrow .arrow:hover{
+	background-position: 170px -35px;
+}
