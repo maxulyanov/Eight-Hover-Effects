@@ -1,6 +1,7 @@
 $(function(){
+	
 
-	// №1
+	// 1 Effect 
 	$('.item-1').find('.zoom, .title').hide();
 	$('.overlay').css('opacity', '0');
 	$('.item-1').hover(function(){
@@ -33,7 +34,7 @@ $(function(){
 	});
 
 
-	// №2
+	// 2 Effect 
 	$('.item-2').find('div').css('opacity', '0.7');
 	$('.item-2').find('.read').hide().css('opacity', '0');
 	$('.item-2').hover(function(){
@@ -56,7 +57,7 @@ $(function(){
 
 
 
-	// №3
+	// 3 Effect 
 	$('.item-3').find('.overlay-top-all').css('opacity', '0.7');
 	$('item-3 .title').hide();
 	$('.item-3').hover(function(){
@@ -79,7 +80,7 @@ $(function(){
 	});
 
 
-	// №4;
+	// 4 Effect 
 	$('.item-4').find('div').css('opacity', '0.7')
 	$('.item-4').hover(function(){
 		$(this).children('div').stop().animate({
@@ -105,7 +106,9 @@ $(function(){
 			top : 		'0%'
 		}, 600)
 	});	
-	// №5
+
+
+	// 5 Effect 
 	$('.overlay-square, .overlay-square-2').css('opacity', '0.7')
 	$('.item-5').find('.zoom').css('opacity', '0');
 	$('.item-5').hover(function(){
@@ -140,7 +143,7 @@ $(function(){
 	});
 
 
-	//6
+	// 6 Effect 
 	$('.mini-box').find('div').css('opacity', '0');
 	$('.item-6').hover(function(){
 		$('.mini-box > div').each(function(i){
@@ -158,7 +161,7 @@ $(function(){
 	});
 
 
-	//7
+	// 7 Effect
 	$('.mini-box-line > div').css('opacity', '0.7');
 	$('.item-7').hover(function(){
 		$('.mini-box-line > div').each(function(i){
@@ -192,7 +195,7 @@ $(function(){
 	});
 
 
-	//8
+	// 8 Effect
 	$('.mini-box-line-2 > div').css('opacity', '0.7');
 	$('.item-8').hover(function(){
 		$('.mini-box-line-2 > div').each(function(i){
@@ -224,6 +227,7 @@ $(function(){
 			top : 	'-45px'
 		}, 100)   	
 	});
+
 
 //END
 });

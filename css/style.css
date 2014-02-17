@@ -1,14 +1,16 @@
-/*Reset*/
+/*--------
+RESET
+--------*/
 *{
 	margin:0;
 	padding:0;
 }
 img{
-	border:none;
+	border: none;
 }
 input{
 	
-	border:none;
+	border: none;
 }
 ul{
     list-style: none;
@@ -17,24 +19,34 @@ h1, h2, h3, h4, h5, h6{
     font-weight: normal;
 }
 input,select,option{
-	outline:0;
-	border:0;
+	outline: 0;
+	border: 0;
 }
 a{
     text-decoration: none;
 }
 
-/*HTML5*/
+
+/*--------
+HTML5
+--------*/
 header, article, nav, footer, section{
-   display:block;
+   display: block;
 }
 
-/*General*/
+
+/*--------
+GENERAL
+--------*/
 body{
 	background: #F7F7F7;
 	text-align: center;
 }
 
+
+/*--------
+STYLE ALL EFFECTS
+--------*/
 .item-1, 
 .item-2, 
 .item-3,
@@ -71,7 +83,9 @@ body{
 }
 
 
-/*1*/
+/*--------
+1 EFFECT
+--------*/
 .item-1 .overlay{
 	background: #000;
 	width:100%;
@@ -115,7 +129,9 @@ body{
 }
 
 
-/*2*/
+/*--------
+2 EFFECT
+--------*/
 .item-2 .overlay-top {
 	background: #000;
 	width: 100%;
@@ -157,7 +173,9 @@ body{
 }
 
 
-/*3*/
+/*--------
+3 EFFECT
+--------*/
 .item-3 .overlay-top-all{
 	background: #000;
 	width: 100%;
@@ -194,7 +212,10 @@ body{
 	transition: all 0.5s ease
 }
 
-/*4*/
+
+/*--------
+4 EFFECT
+--------*/
 .item-4 > div{
 	background: #000;
 	width: 0%;
@@ -244,7 +265,10 @@ body{
 	transition: all 0.5s ease
 }
 
-/*5*/
+
+/*--------
+5 EFFECT
+--------*/
 .item-5 .overlay-square, 
 .item-5 .overlay-square-2{
 	background: #000;
@@ -268,7 +292,9 @@ body{
 }
 
 
-/*6*/
+/*--------
+6 EFFECT
+--------*/
 .item-6 .mini-box > div{
 	width:33.4%;
 	height:33.4%;
@@ -339,7 +365,10 @@ body{
 	color:#353535;
 }
 
-/*7*/
+
+/*--------
+7 EFFECT
+--------*/
 .item-7 .mini-box-line > div{
 	width: 25%;
 	height: 0%;
@@ -402,7 +431,10 @@ body{
 	transition: all 0.5s ease
 }
 
-/*8*/
+
+/*--------
+8 EFFECT
+--------*/
 .item-8 .mini-box-line-2 > div{
 	width:0%;
 	height:25%;
