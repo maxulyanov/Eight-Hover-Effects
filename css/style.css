@@ -54,7 +54,8 @@ STYLE ALL EFFECTS
 .item-5, 
 .item-6, 
 .item-7, 
-.item-8{
+.item-8,
+.item-9{
 	margin:50px 30px;
 	display: inline-block;
 	width:460px;
@@ -74,7 +75,8 @@ STYLE ALL EFFECTS
 .item-5:hover, 
 .item-6:hover, 
 .item-7:hover,
-.item-8:hover{
+.item-8:hover,
+.item-9:hover{
 	border-color:#50B4DF;
 	-moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -404,7 +406,7 @@ STYLE ALL EFFECTS
 }
 .item-7 .read{
 	position: absolute;
-	top:-50px;
+	top:-100px;
 	left:0;
 	text-align: center;
 	width: 100%;
@@ -459,7 +461,7 @@ STYLE ALL EFFECTS
 }
 .item-8 .read{
 	position: absolute;
-	bottom:-50px;
+	bottom:-30px;
 	left:0;
 	text-align: center;
 	width: 100%;
@@ -468,14 +470,14 @@ STYLE ALL EFFECTS
 	background: #50B4DF;
 	border: 2px solid rgb(243, 243, 243);
 	text-decoration: none;
-	padding: 7px 30px;
+	padding: 9px 30px;
 	color: #FFF;
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 16px;
-	-moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+	font-size: 14px;
+	-moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
@@ -500,8 +502,65 @@ STYLE ALL EFFECTS
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 16px;
+	border-bottom: 3px solid rgb(33, 149, 194);
+}
+
+
+/*--------
+9 EFFECT
+--------*/
+.item-9 .overlay-left{
+	width:0%;
+	height:100%;
+	position: absolute;
+	background: #000;
+}
+.item-9 .block-desc{
+	width: 100%;
+	position: absolute;
+	top: 25%;
+	left: -100%;
+	background:	#50B4DF;
+	padding:10px 0;
+}
+.item-9 .block-desc > p{
+	padding: 0 40px;
+	padding: 5px 40px;
+	font-size: 15px;
+	color: #FFF;
+}
+.item-9 .block-desc .read{
+	position: absolute;
+	bottom:-50px;
+	left:0;
+	text-align: center;
+	width: 100%;
+}
+.item-9 .block-desc .read a{
+	background: #50B4DF;
+	border-bottom: 3px solid rgb(33, 149, 194);
+	text-decoration: none;
+	padding: 7px 30px;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.item-9 .block-desc .read a:hover{
+	color:#353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease
+}
+.item-9 .block-desc .title{
+	background: #50B4DF;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 16px;
 }

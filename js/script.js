@@ -170,12 +170,12 @@ $(function(){
 			}, 600)
 		});
 		$(this).find('.read').stop(1,0).delay(400).animate({
-			top : 		'50%'
+			top : 	'50%'
 		})
 		.animate({top: '45%'}, 200)
 		.animate({top: '50%'}, 200)
 
-		$(this).find('.vertical-line').stop(1,0).delay(400).animate({
+		$(this).find('.vertical-line').stop(1,0).delay(430).animate({
 			height : 	'200px'
 		})
 		.animate({height: '190px'}, 200)
@@ -204,7 +204,7 @@ $(function(){
 			opacity: 	'0.7'
 		}, 600) });
 		$(this).find('.read').stop(1,0).delay(400).animate({
-			bottom : 		'30px'
+			bottom : 		'5px'
 		});
 		$(this).find('.title').stop(1,0).animate({
 			top : 	'0'
@@ -217,16 +217,37 @@ $(function(){
 		}, 600)
 		.animate({
 			width : 	'0',
-			opacity : 	'0.7'}
-		,0)
+			opacity : 	'0.7'
+		},0)
 		});
 		$(this).find('.read').stop().animate({
-			bottom : 	'-50px'
+			bottom : 	'-30px'
 		})
 		$(this).find('.title').stop().animate({
 			top : 	'-45px'
-		}, 100)   	
+		})   	
 	});
+
+
+	// 9 Effect
+	$('.item-9 .overlay-left').css('opacity', '0.7');
+	$('.item-9').hover(function(){
+		$(this).find('.overlay-left').stop(1,0).animate({
+			width : 	'100%'
+		}, 600);
+		$(this).find('.block-desc').stop(1,0).animate({
+			left: 		'0'
+		}, 600);
+	},
+	function(){
+		$(this).find('.overlay-left').stop(1,0).animate({
+			width : 	'0'
+		}, 600);
+		$(this).find('.block-desc').stop(1,0).animate({
+			left: 		'-100%'
+		}, 600);
+	});
+
 
 
 //END
