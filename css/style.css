@@ -56,17 +56,17 @@ STYLE ALL EFFECTS
 .item-7, 
 .item-8,
 .item-9{
-	margin:50px 30px;
+	margin: 50px 30px;
 	display: inline-block;
-	width:460px;
+	width: 460px;
 	position: relative;
-	border:5px solid #DDD;
+	border: 5px solid #DDD;
 	overflow: hidden;
 	font-family: 'PT Sans', sans-serif;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-1:hover, 
 .item-2:hover, 
@@ -81,7 +81,7 @@ STYLE ALL EFFECTS
 	-moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease
+    transition: all 0.5s ease;
 }
 
 
@@ -90,44 +90,48 @@ STYLE ALL EFFECTS
 --------*/
 .item-1 .overlay{
 	background: #000;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
+	top: 0;
 	position: absolute;
 }
 .item-1 .zoom{
 	position: absolute;
-	top:0;
-	left:43%;
+	top: 0;
+	left: 43%;
 	background: url(../img/zoom.png) no-repeat;
-	display:block;
-	width:64px;
-	height:83px;
+	display: block;
+	width: 64px;
+	height: 83px;
+	z-index: 2;
 }
 .item-1 .title{
 	position: absolute;
 	background: #50B4DF;
+	border-top: 3px solid rgb(33, 149, 194);
 	left:0;
 	width: 100%;
 	padding: 10px 0px;
 	bottom: -50px;
 	text-align: center;
+	z-index: 2;
 }
 .item-1 .title a{
 	color: #FFF;
-	font-size:20px;
+	font-size: 20px;
 	font-weight: bold;
 	text-decoration: none;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-1 .title a:hover{
-	color:#353535;
+	color: #353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 
 
@@ -137,16 +141,16 @@ STYLE ALL EFFECTS
 .item-2 .overlay-top {
 	background: #000;
 	width: 100%;
-	height:0;
+	height: 0;
 	position: absolute;
-	top:0;
+	top: 0;
 }
 .item-2 .overlay-bottom{
 	background: #000;
 	width: 100%;
-	height:0;
+	height: 0;
 	position: absolute;
-	bottom:0;
+	bottom: 0;
 }
 .item-2 .read{
 	position: absolute;
@@ -163,7 +167,7 @@ STYLE ALL EFFECTS
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-2 .read:hover{
 	background: #353535;
@@ -171,7 +175,7 @@ STYLE ALL EFFECTS
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 
 
@@ -181,16 +185,17 @@ STYLE ALL EFFECTS
 .item-3 .overlay-top-all{
 	background: #000;
 	width: 100%;
-	height:0;
+	height: 0;
 	position: absolute;
-	top:0;
+	top: 0;
 }
 .item-3 .title{
 	position: absolute;
-	left:-100%;
-	top:45%;
+	left: -100%;
+	top: 45%;
 	text-align: center;
 	width: 100%;
+	z-index: 2;
 }
 .item-3 .title a{
 	background: #50B4DF;
@@ -204,14 +209,14 @@ STYLE ALL EFFECTS
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-3 .title a:hover{
 	color:#353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 
 
@@ -221,29 +226,30 @@ STYLE ALL EFFECTS
 .item-4 > div{
 	background: #000;
 	width: 0%;
-	height:0%;
+	height: 0%;
 	position: absolute;
-	right:0;
+	right: 0;
 }
 .item-4 .overlay-sq-big-1,
 .item-4 .overlay-sq-big-2{
-	top:0;
+	top: 0;
 }
 .item-4 .overlay-sq-big-2{
-	left:0;
+	left: 0;
 }
 .item-4 .overlay-sq-big-3,
 .item-4 .overlay-sq-big-4{
-	bottom:0;
+	bottom: 0;
 }
 .item-4 .overlay-sq-big-4{
-	left:0;
+	left: 0;
 }
 .item-4 .read{
 	position: absolute;
-	top:-40px;
+	top: -40px;
 	text-align: center;
 	width: 100%;
+	z-index: 2;
 }
 .item-4 .read a{
 	background: #50B4DF;
@@ -257,14 +263,14 @@ STYLE ALL EFFECTS
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-4 .read a:hover{
 	color:#353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 
 
@@ -275,19 +281,20 @@ STYLE ALL EFFECTS
 .item-5 .overlay-square-2{
 	background: #000;
 	width: 0%;
-	height:0%;
+	height: 0%;
 	position: absolute;
-	top:50%;
-	left:50%;
+	top: 50%;
+	left: 50%;
 }
 .item-5 .zoom{
 	position: absolute;
-	top:41%;
-	left:43%;
+	top: 41%;
+	left: 43%;
 	background: url(../img/zoom-2.png) no-repeat;
-	display:block !important;
-	width:64px;
-	height:66px;
+	display: block !important;
+	width: 64px;
+	height: 66px;
+	z-index: 2;
 }
 .item-5 .zoom:hover{
 	background-position: 0 -68px;
@@ -298,38 +305,38 @@ STYLE ALL EFFECTS
 6 EFFECT
 --------*/
 .item-6 .mini-box > div{
-	width:33.4%;
-	height:33.4%;
+	width: 33.4%;
+	height: 33.4%;
 	position: absolute;
 	background: #000;
 }
 .item-6 .mini-square-1{
-	top:0;
-	left:0;
+	top: 0;
+	left: 0;
 }
 .item-6 .mini-square-2{
-	top:0;
-	left:33.3%;
+	top: 0;
+	left: 33.3%;
 }
 .item-6 .mini-square-3{
-	top:0;
-	left:66.7%;
+	top: 0;
+	left: 66.7%;
 }
 .item-6 .mini-square-4{
-	top:33.3%;
-	left:0;
+	top: 33.3%;
+	left: 0;
 }
 .item-6 .mini-square-5{
-	top:33.3%;
-	left:33.3%;
+	top: 33.3%;
+	left: 33.3%;
 }
 .item-6 .mini-square-6{
-	top:33.3%;
-	left:66.7%;
+	top: 33.3%;
+	left: 66.7%;
 }
 .item-6 .mini-square-7{
-	top:66.7%;
-	left:0;
+	top: 66.7%;
+	left: 0;
 }
 .item-6 .mini-square-8{
 	top: 66.7%;
@@ -344,10 +351,11 @@ STYLE ALL EFFECTS
 	display: block;
 	border-bottom: 3px solid rgb(33, 149, 194);
 	top: 44%;
-	left:-100%;
+	left: -100%;
 	width: 47%;
 	text-align: left;
 	background: #50B4DF !important;
+	z-index: 2;
 }
 .item-6 .box-arrow .arrow{
 	display: block;
@@ -364,7 +372,7 @@ STYLE ALL EFFECTS
 }
 .item-6 .box-arrow .arrow:hover{
 	background-position: 150px -35px;
-	color:#353535;
+	color: #353535;
 }
 
 
@@ -378,20 +386,20 @@ STYLE ALL EFFECTS
 	background: #000;
 }
 .item-7 .mini-line-1{
-	top:0;
-	left:0;
+	top: 0;
+	left: 0;
 }
 .item-7 .mini-line-2{
-	top:0;
-	left:25%;
+	top: 0;
+	left: 25%;
 }
 .item-7 .mini-line-3{
-	top:0;
-	left:50%;
+	top: 0;
+	left: 50%;
 }
 .item-7 .mini-line-4{
-	top:0;
-	left:75%;
+	top: 0;
+	left: 75%;
 }
 .item-7 .vertical-line{
 	display: block;
@@ -403,13 +411,16 @@ STYLE ALL EFFECTS
 	position: absolute;
 	background: #50B4DF;
 	left: 50%;
+	top: 0;
+	z-index: 2;
 }
 .item-7 .read{
 	position: absolute;
-	top:-100px;
-	left:0;
+	top: -100px;
+	left: 0;
 	text-align: center;
 	width: 100%;
+	z-index: 3;
 }
 .item-7 .read a{
 	background: #50B4DF;
@@ -423,14 +434,14 @@ STYLE ALL EFFECTS
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-7 .read a:hover{
-	color:#353535;
+	color: #353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 
 
@@ -438,33 +449,34 @@ STYLE ALL EFFECTS
 8 EFFECT
 --------*/
 .item-8 .mini-box-line-2 > div{
-	width:0%;
-	height:25%;
+	width: 0%;
+	height: 25%;
 	position: absolute;
 	background: #000;
 }
-.item-8 .mini-line-left{
-	top:0;
-	left:0;
+.item-8 .mini-line-left-1{
+	top: 0;
+	left: 0;
 }
 .item-8 .mini-line-left-2{
-	top:50%;
-	left:0;
+	top: 50%;
+	left: 0;
 }
-.item-8 .mini-line-right{
-	top:25%;
-	right:0;
+.item-8 .mini-line-right-1{
+	top: 25%;
+	right: 0;
 }
 .item-8 .mini-line-right-2{
-	top:75%;
-	right:0;
+	top: 75%;
+	right: 0;
 }
 .item-8 .read{
 	position: absolute;
-	bottom:-30px;
+	bottom: -30px;
 	left:0;
 	text-align: center;
 	width: 100%;
+	z-index: 2;
 }
 .item-8 .read a{
 	background: #50B4DF;
@@ -484,16 +496,16 @@ STYLE ALL EFFECTS
 	transition: all 0.5s ease;
 }
 .item-8 .read a:hover{
-	color:#353535;
+	color: #353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-8 .title{
 	position: absolute;
-	top:-45px;
-	width:100%;
+	top: -45px;
+	width: 100%;
 	text-align: center;
 	background: #50B4DF;
 	text-decoration: none;
@@ -503,6 +515,7 @@ STYLE ALL EFFECTS
 	text-transform: uppercase;
 	font-size: 16px;
 	border-bottom: 3px solid rgb(33, 149, 194);
+	z-index: 2;
 }
 
 
@@ -510,9 +523,10 @@ STYLE ALL EFFECTS
 9 EFFECT
 --------*/
 .item-9 .overlay-left{
-	width:0%;
-	height:100%;
+	width: 0%;
+	height: 100%;
 	position: absolute;
+	top: 0;
 	background: #000;
 }
 .item-9 .block-desc{
@@ -522,6 +536,7 @@ STYLE ALL EFFECTS
 	left: -100%;
 	background:	#50B4DF;
 	padding:10px 0;
+	z-index: 2;
 }
 .item-9 .block-desc > p{
 	padding: 0 40px;
@@ -531,8 +546,8 @@ STYLE ALL EFFECTS
 }
 .item-9 .block-desc .read{
 	position: absolute;
-	bottom:-50px;
-	left:0;
+	bottom: -50px;
+	left: 0;
 	text-align: center;
 	width: 100%;
 }
@@ -551,11 +566,11 @@ STYLE ALL EFFECTS
 	transition: all 0.5s ease;
 }
 .item-9 .block-desc .read a:hover{
-	color:#353535;
+	color: #353535;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-	transition: all 0.5s ease
+	transition: all 0.5s ease;
 }
 .item-9 .block-desc .title{
 	background: #50B4DF;
