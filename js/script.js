@@ -188,7 +188,7 @@ $(function(){
 	};
 	$('.mini-box-line > div').css('opacity', '0.7');
 	$('.item-7').hover(function(){
-		$('.mini-box-line > div').each(function(i){
+		$(this).find('.mini-box-line > div').each(function(i){
 			$(this).stop(1,0).delay((i++) * 100).animate({
 				height : 	'100%'
 			}, 600)
@@ -206,7 +206,7 @@ $(function(){
 		.animate({height: '200px'}, 200)
 	},
 	function(){
-		$('.mini-box-line > div').each(function(i){
+		$(this).find('.mini-box-line > div').each(function(i){
 		$(this).stop(1,0).delay((i++) * 0).animate({
 			height : 	'0', 
 		}, 600)})
@@ -233,7 +233,7 @@ $(function(){
 	};
 	$('.mini-box-line-2 > div').css('opacity', '0.7');
 	$('.item-8').hover(function(){
-		$('.mini-box-line-2 > div').each(function(i){
+		$(this).find('.mini-box-line-2 > div').each(function(i){
 		$(this).stop(1,1).delay((i++) * 50).animate({
 			width : 	'100%',
 			opacity: 	'0.7'
@@ -246,7 +246,7 @@ $(function(){
 		})
 	},
 	function(){
-		$('.mini-box-line-2 > div').each(function(){
+		$(this).find('.mini-box-line-2 > div').each(function(){
 		$(this).stop(1,0).animate({
 			opacity: 	'0'
 		}, 600)
