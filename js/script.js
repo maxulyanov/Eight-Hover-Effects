@@ -199,7 +199,7 @@ $(function(){
 		.animate({top: '45%'}, 200)
 		.animate({top: '50%'}, 200)
 
-		$(this).find('.vertical-line').stop(1,0).delay(430).animate({
+		$(this).find('.vertical-line').stop(1,0).delay(415).animate({
 			height : 	'200px'
 		})
 		.animate({height: '190px'}, 200)
@@ -214,7 +214,8 @@ $(function(){
 			top : 		'-10.5%'
 		})
 		$(this).find('.vertical-line').stop(1,0).animate({
-			height : 	'0'
+			height : 	'0',
+			top    :    '-20px'
 		})
 	});
 
